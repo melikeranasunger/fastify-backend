@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+model Kullanici {
+  id    Int     @id @default(autoincrement())
+  ad    String
+  email String  @unique
+}
+model User{
+  id       Int      @id @default(autoincrement())
+  name     String 
+  email    String    @unique
+  password String 
+  bookings  Booking[] //Bir kullanıcının birden fazla rezervasyonu olabilir.
+
+}
+model Room{
+  id         Int     @id @default (autoincrement()) //Benzersiz ID 
+  name       String  // Oda adı
+  capacity   Int  //Kaç kişilik kapasiteyi tutar
+  location   String // Nerede bulunduğu 
+  bookings   Booking[] //odaya ait rezervasyonlar oda ile rezervasyonlar ilişkili
+  events     Event[]   //oda ile etkinlikler ilişkili
+  createdAt  DateTime @default(now()) //odanın oluşturulma tarihi
+  updatedAt  DateTime @updatedAt  // odanın güncellenme tarihi
+
+}
+// Etkinlik modeli
+model Event {
+id     Int   @id @default(autoincrement())
+title  String 
+description  String
+date   DateTime
+roomId Int 
+room   Room  @relation(fields:[roomId],references:[id])
+createdAt  DateTime @default(now())
+updatedAt DateTime  @updatedAt
+}
+
+//Rezervasyon Sistemi
+model Booking{
+id         Int      @id @default(autoincrement())
+userId     Int 
+roomId     Int
+startTime  DateTime
+endTime    DateTime
+user       User     @relation(fields: [userId],references:[id])
+room       Room     @relation(fields: [roomId],references:[id])
+createdAt  DateTime @default(now())
+updatedAt  DateTime @updatedAt
+}

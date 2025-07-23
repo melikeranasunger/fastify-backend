@@ -1,0 +1,192 @@
+TAP version 14
+# Subtest: Rezervasyon testleri (JWT ile)
+    # Subtest: Signup ve Login
+        not ok 1 - (unnamed test)
+          ---
+          type: AggregateError
+          code: ECONNREFUSED
+          tapCaught: returnedPromiseRejection
+          errors:
+            - errno: -4078
+              code: ECONNREFUSED
+              syscall: connect
+              address: ::1
+              port: 3000
+              message: connect ECONNREFUSED ::1:3000
+            - errno: -4078
+              code: ECONNREFUSED
+              syscall: connect
+              address: 127.0.0.1
+              port: 3000
+              message: connect ECONNREFUSED 127.0.0.1:3000
+          ...
+        
+        1..1
+    not ok 1 - Signup ve Login # time=62.987ms
+      ---
+      at:
+        fileName: test\booking.test.js
+        lineNumber: 12
+        columnNumber: 11
+        typeName: Test
+      source: "test('Rezervasyon testleri (JWT ile)', async (t) => {\r
+      
+        \  // Kayıt\r
+      
+        \  await t.test('Signup ve Login', async (t) => {\r
+      
+        ----------^
+      
+        \    await request('http://localhost:3000/api/auth/signup', {\r
+      
+        \      method: 'POST',\n"
+      ...
+    
+    # Subtest: Oda oluşturma
+        not ok 1 - (unnamed test)
+          ---
+          type: AggregateError
+          code: ECONNREFUSED
+          tapCaught: returnedPromiseRejection
+          errors:
+            - errno: -4078
+              code: ECONNREFUSED
+              syscall: connect
+              address: ::1
+              port: 3000
+              message: connect ECONNREFUSED ::1:3000
+            - errno: -4078
+              code: ECONNREFUSED
+              syscall: connect
+              address: 127.0.0.1
+              port: 3000
+              message: connect ECONNREFUSED 127.0.0.1:3000
+          ...
+        
+        1..1
+    not ok 2 - Oda oluşturma # time=22.689ms
+      ---
+      at:
+        fileName: test\booking.test.js
+        lineNumber: 31
+        columnNumber: 11
+        typeName: Test
+      source: "\r
+      
+        \  // Oda oluştur\r
+      
+        \  await t.test('Oda oluşturma', async (t) => {\r
+      
+        ----------^
+      
+        \    const res = await request('http://localhost:3000/api/rooms', {\r
+      
+        \      method: 'POST',\n"
+      ...
+    
+    # Subtest: İlk rezervasyon başarılı olmalı
+        not ok 1 - (unnamed test)
+          ---
+          type: AggregateError
+          code: ECONNREFUSED
+          tapCaught: returnedPromiseRejection
+          errors:
+            - errno: -4078
+              code: ECONNREFUSED
+              syscall: connect
+              address: ::1
+              port: 3000
+              message: connect ECONNREFUSED ::1:3000
+            - errno: -4078
+              code: ECONNREFUSED
+              syscall: connect
+              address: 127.0.0.1
+              port: 3000
+              message: connect ECONNREFUSED 127.0.0.1:3000
+          ...
+        
+        1..1
+    not ok 3 - İlk rezervasyon başarılı olmalı # time=10.84ms
+      ---
+      at:
+        fileName: test\booking.test.js
+        lineNumber: 51
+        columnNumber: 11
+        typeName: Test
+      source: "\r
+      
+        \  // Geçerli rezervasyon oluştur\r
+      
+        \  await t.test('İlk rezervasyon başarılı olmalı', async (t) => {\r
+      
+        ----------^
+      
+        \    const res = await request('http://localhost:3000/api/bookings', {\r
+      
+        \      method: 'POST',\n"
+      ...
+    
+    # Subtest: Çakışan rezervasyon reddedilmeli
+        not ok 1 - (unnamed test)
+          ---
+          type: AggregateError
+          code: ECONNREFUSED
+          tapCaught: returnedPromiseRejection
+          errors:
+            - errno: -4078
+              code: ECONNREFUSED
+              syscall: connect
+              address: ::1
+              port: 3000
+              message: connect ECONNREFUSED ::1:3000
+            - errno: -4078
+              code: ECONNREFUSED
+              syscall: connect
+              address: 127.0.0.1
+              port: 3000
+              message: connect ECONNREFUSED 127.0.0.1:3000
+          ...
+        
+        1..1
+    not ok 4 - Çakışan rezervasyon reddedilmeli # time=13.951ms
+      ---
+      at:
+        fileName: test\booking.test.js
+        lineNumber: 70
+        columnNumber: 11
+        typeName: Test
+      source: "\r
+      
+        \  // Çakışma testi\r
+      
+        \  await t.test('Çakışan rezervasyon reddedilmeli', async (t) => {\r
+      
+        ----------^
+      
+        \    const res = await request('http://localhost:3000/api/bookings', {\r
+      
+        \      method: 'POST',\n"
+      ...
+    
+    1..4
+not ok 1 - Rezervasyon testleri (JWT ile) # time=137.569ms
+  ---
+  at:
+    fileName: test\booking.test.js
+    lineNumber: 10
+    columnNumber: 1
+    typeName: Object
+  source: "let roomId;\r
+  
+    \r
+  
+    test('Rezervasyon testleri (JWT ile)', async (t) => {\r
+  
+    ^
+  
+    \  // Kayıt\r
+  
+    \  await t.test('Signup ve Login', async (t) => {\n"
+  ...
+
+1..1

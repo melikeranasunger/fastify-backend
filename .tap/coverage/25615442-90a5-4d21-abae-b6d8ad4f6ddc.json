@@ -1,0 +1,234 @@
+{
+  "result": [
+    {
+      "scriptId": "118",
+      "url": "file:///C:/Users/MUTLU/Desktop/fastify-backend/src/app.js",
+      "functions": [
+        {
+          "functionName": "buildFastify",
+          "ranges": [
+            {
+              "startOffset": 248,
+              "endOffset": 696,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 355,
+              "endOffset": 403,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "409",
+      "url": "file:///C:/Users/MUTLU/Desktop/fastify-backend/src/routes/auth.js",
+      "functions": [
+        {
+          "functionName": "authRoutes",
+          "ranges": [
+            {
+              "startOffset": 164,
+              "endOffset": 2294,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 254,
+              "endOffset": 1261,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 1309,
+              "endOffset": 2289,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "451",
+      "url": "file:///C:/Users/MUTLU/Desktop/fastify-backend/src/routes/booking.js",
+      "functions": [
+        {
+          "functionName": "bookingRoutes",
+          "ranges": [
+            {
+              "startOffset": 270,
+              "endOffset": 4273,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 412,
+              "endOffset": 1831,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 1935,
+              "endOffset": 2240,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 2345,
+              "endOffset": 2945,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 3045,
+              "endOffset": 3740,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 3840,
+              "endOffset": 4268,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "454",
+      "url": "file:///C:/Users/MUTLU/Desktop/fastify-backend/src/routes/room.js",
+      "functions": [
+        {
+          "functionName": "roomRoutes",
+          "ranges": [
+            {
+              "startOffset": 221,
+              "endOffset": 2472,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 360,
+              "endOffset": 821,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 922,
+              "endOffset": 1028,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 1130,
+              "endOffset": 1491,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 1595,
+              "endOffset": 2080,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 2155,
+              "endOffset": 2460,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "573",
+      "url": "file:///C:/Users/MUTLU/Desktop/fastify-backend/src/routes/event.js",
+      "functions": [
+        {
+          "functionName": "eventRoutes",
+          "ranges": [
+            {
+              "startOffset": 140,
+              "endOffset": 374,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        }
+      ]
+    }
+  ],
+  "timestamp": 69168.121066,
+  "source-map-cache": {}
+}

@@ -1,0 +1,23 @@
+{
+  "result": [
+    {
+      "scriptId": "453",
+      "url": "file:///C:/Users/MUTLU/Desktop/fastify-backend/src/utils/bookingUtils.js",
+      "functions": [
+        {
+          "functionName": "isBookingOverlapping",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 343,
+              "count": 2
+            }
+          ],
+          "isBlockCoverage": true
+        }
+      ]
+    }
+  ],
+  "timestamp": 69170.141767,
+  "source-map-cache": {}
+}

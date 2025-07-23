@@ -1,0 +1,251 @@
+{
+  "date": "2025-07-22T14:14:15.336Z",
+  "argv": [
+    "C:\\nvm4w\\nodejs\\node.exe",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\test\\booking.test.js"
+  ],
+  "execArgv": [
+    "--import=file:///C:/Users/MUTLU/Desktop/fastify-backend/node_modules/@tapjs/typescript/dist/esm/import.mjs",
+    "--import=file:///C:/Users/MUTLU/Desktop/fastify-backend/node_modules/@tapjs/mock/dist/esm/import.mjs",
+    "--enable-source-maps",
+    "--import=file:///C:/Users/MUTLU/Desktop/fastify-backend/node_modules/@tapjs/processinfo/dist/esm/import.mjs",
+    "--require=./test/setup.js"
+  ],
+  "NODE_OPTIONS": "\"--import=file:///C:/Users/MUTLU/Desktop/fastify-backend/node_modules/@tapjs/processinfo/dist/esm/import.mjs\"",
+  "cwd": "C:\\Users\\MUTLU\\Desktop\\fastify-backend",
+  "pid": 22240,
+  "ppid": 9848,
+  "parent": null,
+  "uuid": "7340e6c3-840c-42d7-8802-1911377223bb",
+  "files": [
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\test\\booking.test.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\typescript\\dist\\esm\\import.mjs",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@isaacs\\ts-node-temp-fork-for-pr-2009\\import.mjs",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@isaacs\\ts-node-temp-fork-for-pr-2009\\import-loader.mjs",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\import.mjs",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\mock-service.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\dist\\esm\\index.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\index.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\is-relative-require.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\export-line.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\munge-mocks.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\resolve-mock-entry-point.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\service-key.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\dist\\esm\\call-site-like.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\dist\\esm\\require-resolve.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\get-all-conditional-values.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\get-all-conditions.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\get-unique-condition-sets.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-all-exports.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-all-local-imports.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-conditional-value.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-import.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\is-windows.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\get-conditional-values-list.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\dist\\esm\\parse.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\errors.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\get-named-exports-list.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\read-pkg.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-export.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\star-glob.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\to-path.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\file-exists.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\find-dep-package.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\to-file-url.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-dependency-export.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-package-import.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\read-json.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\walk-up-path\\dist\\esm\\index.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\find-star-match.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\index.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\index.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\glob.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\has-magic.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\ignore.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@isaacs\\brace-expansion\\dist\\esm\\index.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\assert-valid-pattern.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\ast.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\escape.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\unescape.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\path-scurry\\dist\\esm\\index.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\pattern.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\walker.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@isaacs\\balanced-match\\dist\\esm\\index.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\brace-expressions.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\path-scurry\\node_modules\\lru-cache\\dist\\esm\\index.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\processor.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\minipass\\dist\\esm\\index.js",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\loader.mjs",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\hooks.mjs",
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\mock-service-client.js"
+  ],
+  "sources": {
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\typescript\\dist\\esm\\import.mjs": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\typescript\\src\\import.mts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\import.mjs": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\src\\import.mts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\mock-service.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\src\\mock-service.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\dist\\esm\\index.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\src\\index.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\index.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\index.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\is-relative-require.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\is-relative-require.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\export-line.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\src\\export-line.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\munge-mocks.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\src\\munge-mocks.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\resolve-mock-entry-point.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\src\\resolve-mock-entry-point.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\dist\\esm\\service-key.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\mock\\src\\service-key.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\dist\\esm\\call-site-like.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\src\\call-site-like.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\dist\\esm\\require-resolve.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\src\\require-resolve.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\get-all-conditional-values.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\get-all-conditional-values.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\get-all-conditions.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\get-all-conditions.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\get-unique-condition-sets.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\get-unique-condition-sets.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-all-exports.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\resolve-all-exports.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-all-local-imports.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\resolve-all-local-imports.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-conditional-value.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\resolve-conditional-value.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-import.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\resolve-import.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\is-windows.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\is-windows.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\get-conditional-values-list.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\get-conditional-values-list.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\dist\\esm\\parse.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@tapjs\\stack\\src\\parse.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\errors.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\errors.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\get-named-exports-list.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\get-named-exports-list.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\read-pkg.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\read-pkg.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-export.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\resolve-export.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\star-glob.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\star-glob.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\to-path.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\to-path.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\file-exists.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\file-exists.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\find-dep-package.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\find-dep-package.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\to-file-url.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\to-file-url.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-dependency-export.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\resolve-dependency-export.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\resolve-package-import.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\resolve-package-import.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\read-json.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\read-json.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\walk-up-path\\dist\\esm\\index.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\walk-up-path\\src\\index.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\dist\\esm\\find-star-match.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\src\\find-star-match.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\index.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\src\\index.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\index.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\src\\index.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\glob.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\src\\glob.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\has-magic.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\src\\has-magic.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\ignore.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\src\\ignore.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@isaacs\\brace-expansion\\dist\\esm\\index.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@isaacs\\brace-expansion\\src\\index.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\assert-valid-pattern.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\src\\assert-valid-pattern.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\ast.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\src\\ast.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\escape.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\src\\escape.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\unescape.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\src\\unescape.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\path-scurry\\dist\\esm\\index.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\path-scurry\\src\\index.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\pattern.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\src\\pattern.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\walker.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\src\\walker.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@isaacs\\balanced-match\\dist\\esm\\index.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\@isaacs\\balanced-match\\src\\index.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\dist\\esm\\brace-expressions.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\minimatch\\src\\brace-expressions.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\path-scurry\\node_modules\\lru-cache\\dist\\esm\\index.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\path-scurry\\node_modules\\lru-cache\\src\\index.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\dist\\esm\\processor.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\resolve-import\\node_modules\\glob\\src\\processor.ts"
+    ],
+    "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\minipass\\dist\\esm\\index.js": [
+      "C:\\Users\\MUTLU\\Desktop\\fastify-backend\\node_modules\\minipass\\src\\index.ts"
+    ]
+  },
+  "root": "7340e6c3-840c-42d7-8802-1911377223bb",
+  "externalID": "test/booking.test.js",
+  "code": 1,
+  "signal": null,
+  "runtime": 10905.4977
+}
