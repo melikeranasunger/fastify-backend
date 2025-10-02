@@ -1,0 +1,28 @@
+# Tüm metin dosyaları otomatik olarak normalize edilecek
+* text=auto
+
+# JavaScript ve JSON dosyaları LF formatında
+*.js text eol=lf
+*.json text eol=lf
+
+# Prisma şemaları LF formatında
+*.prisma text eol=lf
+
+# Test dosyaları LF formatında
+*.tap text eol=lf
+
+# HTML / CSS / Markdown dosyaları LF formatında
+*.html text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+
+# Ignore binary files (örnek: resim, font vb.)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary

@@ -1,8 +1,9 @@
 {
   "name": "fastify-backend",
   "version": "1.0.0",
+
   "scripts": {
-      "dev": "nodemon src/startServer.js",
+    "dev": "nodemon src/startServer.js",
     "test": "tap",
     "coverage": "nyc tap"
   },
@@ -13,9 +14,11 @@
   },
   "type": "commonjs",
   "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@fastify/helmet": "^13.0.2",
     "@prisma/client": "^6.10.1",
     "bcrypt": "^6.0.0",
-    "fastify": "^5.4.0",
+    "fastify": "^5.6.1",
     "jsonwebtoken": "^9.0.2",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1"

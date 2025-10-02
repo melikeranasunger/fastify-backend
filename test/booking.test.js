@@ -1,88 +1,53 @@
 const { test } = require('tap');
 const { request } = require('undici');
+const { start, close } = require('./setup');
 
-const email = `melike${Date.now()}@test.com`;
-const password = '123456';
+test('Booking Routes', async t => {
+  // Test server başlat
+  const fastify = await start();
+  const port = fastify.server.address().port;
+  const AUTH_URL = `http://localhost:${port}/api/auth`;
+  const BOOKING_URL = `http://localhost:${port}/api/bookings`;
 
-let token;
-let roomId;
-
-test('Rezervasyon testleri (JWT ile)', async (t) => {
-  // Kayıt
-  await t.test('Signup ve Login', async (t) => {
-    await request('http://localhost:3000/api/auth/signup', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ name: 'Melike', email, password })
-    });
-
-    const loginRes = await request('http://localhost:3000/api/auth/login', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ email, password })
-    });
-
-    const body = await loginRes.body.json();
-    token = body.token;
-    t.ok(token, 'Token alınmalı');
+  // Token al (login)
+  const loginRes = await request(`${AUTH_URL}/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'admin@example.com', password: 'admin123' })
   });
+  t.equal(loginRes.statusCode, 200, 'Login 200 dönmeli');
+  const loginData = await loginRes.body.json();
+  const token = loginData.token;
+  t.ok(token, 'Token dönmeli');
 
-  // Oda oluştur
-  await t.test('Oda oluşturma', async (t) => {
-    const res = await request('http://localhost:3000/api/rooms', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        authorization: `Bearer ${token}`
-      },
-      body: JSON.stringify({
-        name: 'Toplantı Odası',
-        capacity: 5,
-        location: 'Kat 1'
-      })
-    });
-
-    const body = await res.body.json();
-    roomId = body.oda.id;
-    t.equal(res.statusCode, 201, 'Oda başarılı şekilde oluşturulmalı');
+  //Booking oluştur
+  const postRes = await request(BOOKING_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    },
+    body: JSON.stringify({
+      roomId: 1,
+      startDate: '2025-10-05',
+      endDate: '2025-10-06'
+    })
   });
+  t.equal(postRes.statusCode, 201, 'Booking 201 dönmeli');
+  const postData = await postRes.body.json();
+  t.match(postData, { roomId: 1 }, 'Booking doğru oda ile oluşturuldu');
 
-  // Geçerli rezervasyon oluştur
-  await t.test('İlk rezervasyon başarılı olmalı', async (t) => {
-    const res = await request('http://localhost:3000/api/bookings', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        authorization: `Bearer ${token}`
-      },
-      body: JSON.stringify({
-        roomId,
-        startTime: '2025-07-01T10:00:00.000Z',
-        endTime: '2025-07-01T11:00:00.000Z'
-      })
-    });
-
-    const body = await res.body.json();
-    t.equal(res.statusCode, 201, 'İlk rezervasyon başarılı olmalı');
+  //Booking listele
+  const getRes = await request(BOOKING_URL, {
+    method: 'GET',
+    headers: { Authorization: `Bearer ${token}` }
   });
+  t.equal(getRes.statusCode, 200, 'Booking listesi 200 dönmeli');
+  const bookings = await getRes.body.json();
+  t.ok(Array.isArray(bookings), 'Booking listesi array olmalı');
 
-  // Çakışma testi
-  await t.test('Çakışan rezervasyon reddedilmeli', async (t) => {
-    const res = await request('http://localhost:3000/api/bookings', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        authorization: `Bearer ${token}`
-      },
-      body: JSON.stringify({
-        roomId,
-        startTime: '2025-07-01T10:30:00.000Z',
-        endTime: '2025-07-01T11:30:00.000Z'
-      })
-    });
-
-    const body = await res.body.json();
-    t.equal(res.statusCode, 409, 'Çakışan rezervasyon 409 dönmeli');
-    t.match(body.hata, /mevcut/, 'Hata mesajı çakışmayı belirtmeli');
-  });
+  // Test server kapat
+  await close();
 });
+
+

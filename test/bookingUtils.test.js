@@ -1,3 +1,5 @@
+// test/bookingUtils.test.js
+require('./setup');
 const t = require('tap');
 const sinon = require('sinon');
 const { PrismaClient } = require('@prisma/client');
@@ -5,10 +7,14 @@ const { isBookingOverlapping } = require('../src/utils/bookingUtils');
 
 const prisma = new PrismaClient();
 
+t.teardown(async () => {
+  await prisma.$disconnect();
+});
+
 t.test('isBookingOverlapping fonksiyonu doğru sonuç döndürmeli', async (t) => {
   const stub = sinon.stub(prisma.booking, 'findFirst');
 
-  // 1. Çakışma VAR
+  // Çakışma VAR
   stub.resolves({ id: 1 });
   const result1 = await isBookingOverlapping(
     prisma,
@@ -18,7 +24,7 @@ t.test('isBookingOverlapping fonksiyonu doğru sonuç döndürmeli', async (t) =
   );
   t.equal(result1, true, 'Çakışan rezervasyon varsa true dönmeli');
 
-  // 2. Çakışma YOK
+  // Çakışma YOK
   stub.resolves(null);
   const result2 = await isBookingOverlapping(
     prisma,

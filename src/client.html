@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.io Test Client</title>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+  <h1>Socket.io JWT Auth Test</h1>
+
+  <script>
+    // Backend'den aldığın JWT token
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoibWVsaWtlQGV4YW1wbGUuY29tIiwiaWF0IjoxNzUxOTcyOTkxLCJleHAiOjE3NTE5NzY1OTF9.x4_mkjr78-gYBVruqoehoKrPL1eLl6S3-Q4Q1CYmUnc"; 
+
+    // Socket.io sunucusuna bağlanırken token gönder
+    const socket = io("http://localhost:3000", {
+      auth: { token }
+    });
+
+    // Bağlantı başarılı olduğunda
+    socket.on("connect", () => {
+      console.log("🔌 Socket.io'ya bağlandı:", socket.id);
+    });
+
+    // Rezervasyon oluşturuldu bildirimi
+    socket.on("booking_created", (data) => {
+      console.log("Yeni rezervasyon oluşturuldu:", data);
+    });
+
+    // Rezervasyon güncellendi bildirimi
+    socket.on("booking_updated", (data) => {
+      console.log("Rezervasyon güncellendi:", data);
+    });
+
+    // Rezervasyon silindi bildirimi
+    socket.on("booking_deleted", (data) => {
+      console.log("Rezervasyon silindi:", data);
+    });
+
+    // Bağlantı kesildiğinde
+    socket.on("disconnect", () => {
+      console.log("❌ Socket.io bağlantısı kesildi");
+    });
+  </script>
+</body>
+</html>

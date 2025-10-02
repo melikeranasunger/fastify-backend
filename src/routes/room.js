@@ -4,16 +4,13 @@ const { request } = require('undici');
 const prisma = new PrismaClient();
 
 async function roomRoutes(fastify, options) {
-  // ✅ Korumalı route: Oda oluşturma
+  // Korumalı route: Oda oluşturma
   fastify.post('/rooms', { preHandler: verifyToken }, async (request, reply) => {
     try{
      const { name, capacity, location } = request.body;
-     
       const newRoom = await prisma.room.create({
       data: { name, capacity, location },
-
     });
- 
      return reply.code(201).send({
       mesaj: 'Oda başarıyla oluşturuldu.',
       oda: newRoom,
@@ -25,7 +22,7 @@ async function roomRoutes(fastify, options) {
   }
   });
 
-  // 🟡 Açık route: Tüm odaları listele (token gerekmez) herkese açık
+  // Açık route: Tüm odaları listele (token gerekmez) herkese açık
   fastify.get('/rooms', async (request, reply) => {
     
     const rooms = await prisma.room.findMany();
@@ -68,9 +65,7 @@ async function roomRoutes(fastify, options) {
   // Odayı sil
   fastify.delete('/rooms/:id',{preHandler:verifyToken},async(request,reply)=>{
     const id = parseInt(request.params.id);
-
-
-    try{
+  try{
       await prisma.room.delete({where:{id} });
       return reply.send({mesaj:'Oda silindi.'});
     } catch ( error){
@@ -78,7 +73,7 @@ async function roomRoutes(fastify, options) {
     }
 
   });
-   
+    
   }
 
 module.exports = roomRoutes;

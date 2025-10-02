@@ -1,3 +1,4 @@
+// src/utils/bookingUtils.js
 async function isBookingOverlapping(prisma, roomId, startTime, endTime) {
   const overlappingBooking = await prisma.booking.findFirst({
     where: {
@@ -15,3 +16,4 @@ async function isBookingOverlapping(prisma, roomId, startTime, endTime) {
 module.exports = {
   isBookingOverlapping,
 };
+

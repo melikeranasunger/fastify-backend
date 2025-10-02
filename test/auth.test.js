@@ -1,50 +1,61 @@
-// test/auth.test.js
-
 const { test } = require('tap');
-const buildFastify = require('../src/app'); // ✅ server.js değil, app.js çağırıyoruz
+const { request } = require('undici');
+const { start, close } = require('./setup');
 
-const password = '123456';
+test('Auth Routes', async t => {
+  const fastify = await start();
+  const port = fastify.server.address().port;
+  const BASE_URL = `http://localhost:${port}/api/auth`;
 
-test('Auth testleri', async (t) => {
-  const fastify = buildFastify(); // bellekte sunucu başlat
-  await fastify.ready();          // tüm plugin'leri yükle
-
-  await t.test('Kullanıcı kaydı ve başarılı giriş', async (t) => {
-    const email = `test${Date.now()}@mail.com`;
-
-    const signupRes = await fastify.inject({
-      method: 'POST',
-      url: '/api/auth/signup',
-      payload: {  name: 'Test Kullanıcı',email, password },
-    });
-    t.equal(signupRes.statusCode, 201, 'Signup status 201 olmalı');
-
-    const loginRes = await fastify.inject({
-      method: 'POST',
-      url: '/api/auth/login',
-      payload: { email, password },
-    });
-    t.equal(loginRes.statusCode, 200, 'Login status 200 olmalı');
+  // Signup - Yeni kullanıcı oluştur
+  const signupRes = await request(`${BASE_URL}/signup`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'melike@example.com', password: '123456' })
   });
+  t.equal(signupRes.statusCode, 200, 'Signup başarılı olmalı');
+  const signupData = await signupRes.body.json();
+  t.match(signupData, { message: 'User created' });
 
-  await t.test('Giriş başarısız (yanlış şifre)', async (t) => {
-    const email = `test${Date.now()}@mail.com`;
-
-    await fastify.inject({
-      method: 'POST',
-      url: '/api/auth/signup',
-      payload: { email, password },
-    });
-
-    const res = await fastify.inject({
-      method: 'POST',
-      url: '/api/auth/login',
-      payload: { email, password: 'yanlisSifre' },
-    });
-    t.notEqual(res.statusCode, 200, 'Yanlış şifre ile login başarılı olmamalı');
+  // Geçerli login
+  const loginRes = await request(`${BASE_URL}/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'admin@example.com', password: 'admin123' })
   });
+  t.equal(loginRes.statusCode, 200, 'Status 200 olmalı');
+  const loginData = await loginRes.body.json();
+  t.ok(loginData.token, 'Token dönmeli');
 
-  await fastify.close(); // sunucuyu kapat
+  // Yanlış şifre
+  const wrongRes = await request(`${BASE_URL}/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'admin@example.com', password: 'yanlis' })
+  });
+  t.equal(wrongRes.statusCode, 401, 'Yanlış şifre 401 dönmeli');
+
+  // Eksik body
+  const emptyRes = await request(`${BASE_URL}/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({})
+  });
+  t.equal(emptyRes.statusCode, 400, 'Eksik body 400 dönmeli');
+  // Token ile profil
+  const profileRes = await request(`${BASE_URL}/profile`, {
+    method: 'GET',
+    headers: { Authorization: `Bearer ${loginData.token}` }
+  });
+  t.equal(profileRes.statusCode, 200, 'Token ile profile başarılı');
+
+  // Tokensız profil
+  const noTokenRes = await request(`${BASE_URL}/profile`, {
+    method: 'GET'
+  });
+  t.equal(noTokenRes.statusCode, 401, 'Token olmadan 401 dönmeli');
+
+  await close();
 });
 
 

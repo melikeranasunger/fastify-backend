@@ -5,13 +5,17 @@ let fastify;
 
 async function start() {
   fastify = buildFastify();
-  await fastify.listen({ port: 0 }); // Random kullanılabilir port
+  await fastify.listen({ port:0 });// 0 = random boş port seçer
   return fastify;
 }
 
 async function close() {
-  await fastify.close();
+  if (fastify) {
+    await fastify.close();
+  }
 }
 
 module.exports = { start, close };
+
+
 
