@@ -1,8 +1,0 @@
-TAP version 14
-# Subtest: isBookingOverlapping fonksiyonu doğru sonuç döndürmeli
-    ok 1 - Çakışan rezervasyon varsa true dönmeli
-    ok 2 - Çakışma yoksa false dönmeli
-    1..2
-ok 1 - isBookingOverlapping fonksiyonu doğru sonuç döndürmeli # time=49.806ms
-
-1..1

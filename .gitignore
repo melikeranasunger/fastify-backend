@@ -1,5 +1,16 @@
-node_modules
-# Keep environment variables out of version control
+# Node modules
+node_modules/
+
+# Environment variables
 .env
 
+# Prisma generated files
 /generated/prisma
+prisma/dev.db
+
+# Test coverage & temp files
+.nyc_output/
+.tap/
+*.tap
+*.log
+
